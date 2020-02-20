@@ -2,12 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Musicologist</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <style>
+        audio {
+            background: red;
+            width: 100px;
+        }
+    </style>
   </head>
   <body>
-    <div>
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">
@@ -18,31 +24,27 @@
       </nav>
       <div class="container">
         <div class="row">
-          <div class="col col-md-2 hidden-sm hidden-xs"></div>
-          <div class="col col-xs-12 col-md-8">
-            <div class="row">
-              <div class="col col-xs-12">
-                <div class="input-group">
+          <div class="col-12">
+             <div class="row">
+                <div class="input-group m-2">
                   <input type="text" class="form-control" id="musicField" placeholder="Song Name, Artist...">
                   <span class="input-group-btn">
                     <button id="addButton" class="btn btn-default" type="button">Add!</button>
                   </span>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <h1>My Music Interests</h1>
-            </div>
-            <div class="row">
-              <ul class="list-group info">
-              </ul>
-            </div>
-          </div>
-          <div class="col col-md-2 hidden-sm hidden-xs"></div>
-        </div>
-        <div class="row">
-          <div class="col col-xs-12 text-center">
-            <button id="getPlaylistBtn" class="btn btn-default btn-lg">Get Playlist</button>
+                <div class="col-12 text-center m-2">
+                  <h1>My Music Interests</h1>
+                </div>
+                <div class="col-12">
+                  <ul class="list-group info">
+                  </ul>
+                </div>
+                <div class="col-12 text-center m-2">
+                    <button id="getPlaylistBtn" class="btn btn-light btn-lg">Get Playlist</button>
+                </div>
+             </div>
+             <div id="results" class="row">
+             </div>
           </div>
         </div>
       </div>
